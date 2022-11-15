@@ -14,3 +14,20 @@ for ( const link of links) {
         nav .classList.remove('show')
     })
 }
+
+const header = document.querySelector('#header')
+const navHeight = header.offsetHeight
+// console.log(navHeight)
+
+function sombraHeader() {
+    if (window.scrollY >= navHeight) {
+        header.classList.add('scroll')
+    } 
+    else{
+        header.classList.remove('scroll')
+    }
+}
+
+window.addEventListener('scroll', function(){
+    sombraHeader()
+})
